@@ -60,6 +60,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  .state('tab.foods', {
+    url: '/foods', 
+    views: {
+      'tab-foods': {
+        templateUrl: 'templates/tab-foods.html', 
+        controller: 'FoodsCtrl'
+      }
+    }
+  })
+
   .state('tab.chats', {
       url: '/chats',
       views: {
@@ -88,6 +98,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
     }
 })  
+
+.state('tab.food-detail', {
+  url: '/foods/:mealType', 
+  views: {
+    'tab-foods': {
+      templateUrl: 'templates/food-detail.html',
+      controller: 'FoodDetailCtrl'
+    }
+  }
+})
 
   .state('tab.account', {
     url: '/account',

@@ -26,6 +26,50 @@ getCard: function(cardVal) {
  
         })
 
+.factory('Foods', function() {
+
+      var foods = [
+      { "mealType": "Drinks" },
+      { "mealType": "Dinner" }
+      ];
+
+      var drinks = [
+      { "selection":"tea" },
+      { "selection":"coffee"}
+      ];
+
+      var dinners = 
+      [
+      { "selection":"fruit"},
+      { "selection":"vegetables"}, 
+      { "selection":"dessert"}
+      ];
+
+      return {
+        getFood: function(mealType) {
+          for (var i = 0; i < foods.length; i++) {
+            if (foods[i].mealType == mealType ) {
+              return foods[i];
+            }
+          }
+          return null
+        }, 
+        allFoods: function() {
+          return foods;
+        },
+        getMealType: function(mealType) {
+          if (mealType == foods[0].mealType) {
+            return drinks;
+          }
+          if (mealType == foods[1].mealType) {
+            return dinners;
+          }
+        },
+
+
+      }
+})
+
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 
@@ -73,4 +117,11 @@ getCard: function(cardVal) {
       return null;
     }
   };
-});
+})
+
+.factory('Food', function() {
+  var foods = [{
+    
+  }]
+})
+;

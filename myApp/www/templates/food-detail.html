@@ -1,0 +1,12 @@
+<ion-view view-title="Food Details">
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar item-icon-right"
+                      ng-repeat="mealType in mealTypes" type="item-text-wrap" href="#/tab/foods/{{mealType.selection}}">
+                {{ mealType.selection }}
+                
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
